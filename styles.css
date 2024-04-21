@@ -156,7 +156,7 @@ p{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 50px 25px;
     margin-top: 100px;
 }
 .card{
@@ -165,6 +165,10 @@ p{
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    transition: 0.5s;
+}
+.card:hover{
+    transform: translateY(-20px);
 }
 .card img{
     width: 100%;
@@ -200,8 +204,6 @@ p{
     color: #3498db;
     transition: 0.5s;
 }
-
-
 /* ---------footer------- */
 
 .footer{
@@ -215,12 +217,24 @@ p{
     /* margin-top: 15px;*/  /**/
     font-weight: 600;
 }
-.media{
+/* .media info{
     display: flex;
     justify-content: space-evenly;
+} */
 
+.icons{
+    transform: translateY(5px);
 }
-
+/* .vline VERTIKALNA LINIJA PO SREDINI EKRANA ZBOG POZICIONIRANJA ELEMENATA
+{
+    position:fixed;
+    top:0;
+    left:50%;
+    bottom:0; margin:0;
+    border:none;
+    border-right:solid 1px black;
+    z-index:10;
+} */
 
 
 
