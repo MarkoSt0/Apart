@@ -1,5 +1,5 @@
 html {
-
+    scroll-behavior: smooth;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   
 }
@@ -60,8 +60,8 @@ nav li:first-child{
     height: 100vh;
     width: 250px;
     z-index: 999; 
-    background-color: rgba(255, 255, 255, 0.171);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.628);
+    backdrop-filter: blur(15px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -142,7 +142,6 @@ nav .gg{
 h1{
     font-size: 36px;
     font-weight: 600;
-
 }
 p{
     color: #777;
@@ -157,7 +156,7 @@ p{
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 50px 25px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .card{
     width: 280px;
@@ -204,6 +203,10 @@ p{
     color: #3498db;
     transition: 0.5s;
 }
+.card-icons{
+    transform: translateY(3px);
+}
+
 /* ---------footer------- */
 
 .footer{
@@ -223,7 +226,7 @@ p{
 } */
 
 .icons{
-    transform: translateY(5px);
+    transform: translateY(7px);
 }
 /* .vline VERTIKALNA LINIJA PO SREDINI EKRANA ZBOG POZICIONIRANJA ELEMENATA
 {
