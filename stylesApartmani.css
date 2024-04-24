@@ -28,7 +28,7 @@ nav{
 }
 .main-nav img{
     height: 50px;
-    padding-left: 50%;
+    /* padding-left: 50%; */
 }
 .sidebar img{
     height: 50px;
@@ -97,9 +97,9 @@ nav li:first-child{
     }
 }
 @media only screen and(max-width: 600px){
-    .main-part{
+    /* .main-part{
         
-    }
+    } */
 }
 nav .gg{
     display: none;
