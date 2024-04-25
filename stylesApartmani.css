@@ -96,11 +96,6 @@ nav li:first-child{
         width: 100%;
     }
 }
-@media only screen and(max-width: 600px){
-    /* .main-part{
-        
-    } */
-}
 nav .gg{
     display: none;
 }
@@ -132,11 +127,27 @@ nav .gg{
     transform: rotate(180deg);
 }
 .frame{
-    margin-top: 30px;
+    margin-top: 25px;
     width: 250px;
     height: 375px;
     overflow: hidden;
     box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+#variableValue{
+    visibility: hidden;
+    display: none;
+}
+#variableValue::after{
+    content: "250";
+}
+@media(min-width: 1024px){
+    .frame{
+        height: 100%;
+        width: 290px;
+    }
+    #variableValue::after {
+        content: "290";
+    }
 }
 .slider{
     display: flex;
