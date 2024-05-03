@@ -193,30 +193,12 @@ nav .gg{
 }
 
 
-@media(min-width: 1024px){
-    .slider-wrapper{
-        position: relative;
-        max-width: 450px;
-        margin: 0;
-    }
-    .slider{
-        display: flex;
-        overflow-x: auto;
-        overflow-x: hidden;
-        height: 600px;
-        scroll-snap-type: x mandatory;
-        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-        border-radius: 0.5rem;
-    
-    }
-}
-
 
 
 /* ---------footer------- */
 
 .footer{
-    margin-top: 50px;
+    margin-top: 150px;
     width: 100%-200px;
     text-align: center;
     padding: 20px 0;
@@ -245,7 +227,26 @@ nav .gg{
     border-right:solid 1px black;
     z-index:10;
 } */
-
+@media(min-width: 1024px){
+    .slider-wrapper{
+        position: relative;
+        max-width: 450px;
+        margin: 0;
+    }
+    .slider{
+        display: flex;
+        overflow-x: auto;
+        overflow-x: hidden;
+        height: 600px;
+        scroll-snap-type: x mandatory;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        border-radius: 0.5rem;
+    
+    }
+    .footer{
+        margin-top: 50px;
+    }
+}
 
 
 
