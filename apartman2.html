@@ -38,7 +38,7 @@
             </div>
         </nav>
     <div class="main-part">
-        <div class="slider-wrapper">
+        <div class="slider-wrapper" id="slider-wrapper">
             <div class="slider">
                 <video class="img" id="slide-1" src="Apartman 1/IMG_2862.MOV" autoplay muted loop></video>
                 <img class="img" id="slide-2" src="Apartman 1/5.jpg" alt="">
@@ -49,13 +49,13 @@
                 <img class="img" id="slide-7" src="Apartman 1/6.jpg" alt="">
             </div>
             <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-                <a href="#slide-4"></a>
-                <a href="#slide-5"></a>
-                <a href="#slide-6"></a>
-                <a href="#slide-7"></a>
+                <a id="button-1" href="#slide-1" onclick="checkPosition(1)"></a>
+                <a id="button-2" href="#slide-2" onclick="checkPosition(2)"></a>
+                <a id="button-3" href="#slide-3" onclick="checkPosition(3)"></a>
+                <a id="button-4" href="#slide-4" onclick="checkPosition(4)"></a>
+                <a id="button-5" href="#slide-5" onclick="checkPosition(5)"></a>
+                <a id="button-6" href="#slide-6" onclick="checkPosition(6)"></a>
+                <a id="button-7" href="#slide-7" onclick="checkPosition(7)"></a>
 
             </div>
         </div>
@@ -99,6 +99,77 @@
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = 'none';
     }  
+
+    // --------------SWIPE-----------------
+    let slideNumber = 1;
+    function checkPosition(index) {
+        slideNumber = index; // Store selected button index
+        // console.log("Selected button:", slideNumber);
+    }
+
+    var swipeArea = document.getElementById('slider-wrapper');
+    var startX, startY;
+
+    swipeArea.addEventListener('touchstart', function (e) {
+        var touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+    });
+
+    swipeArea.addEventListener('touchmove', function (e) {
+        e.preventDefault(); // Prevent scrolling
+    });
+
+    //Counter
+        const images = document.querySelectorAll('.img');
+        const length = images.length;
+
+    swipeArea.addEventListener('touchend', function (e) {
+        var touch = e.changedTouches[0];
+        var endX = touch.clientX;
+        var endY = touch.clientY;
+        var diffX = startX - endX;
+        var diffY = startY - endY;
+
+        // ----------func which triggers click-----------
+        const handleClick = ()=>{
+            // Trigger click on corresponding button
+            var button = document.getElementById('button-' + slideNumber);
+            button.click();
+        }
+        const nextSlide = ()=>{
+            slideNumber++;
+            handleClick();
+        }
+        const prevSlide = ()=>{
+            slideNumber--;
+            handleClick();
+        }
+        // Determine if swipe was left or right
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 0) {
+                // Swipe left
+                if(slideNumber < length){
+                    nextSlide();
+                }
+                else{
+                    slideNumber = 1;
+                    handleClick();
+                }
+            }
+            else {
+            // Swipe right 
+                if(slideNumber > 1){
+                    prevSlide();
+                }
+                else{
+                    slideNumber = length;
+                    handleClick();
+                }
+            }
+        }
+    });
+    console.log(slideNumber);
 
 </script>
 <!-- <hr class="vline" /> -->

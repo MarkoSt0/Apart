@@ -114,7 +114,7 @@ nav .gg{
 }
 .slider-wrapper{
     position: relative;
-    max-width: 340px;
+    max-width: 339px;
     margin: 0;
 }
 .slider{
@@ -230,7 +230,7 @@ nav .gg{
 @media(min-width: 1024px){
     .slider-wrapper{
         position: relative;
-        max-width: 450px;
+        max-width: 449px;
         margin: 0;
     }
     .slider{
